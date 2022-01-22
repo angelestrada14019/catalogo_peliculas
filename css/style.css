@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --gris-claro: #DFE9F3;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+    margin-bottom: 4rem;
+
+}
+
+header {
+    text-align: center;
+    background-color: var(--secundario);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--blanco);
+    font-size: 3.5rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2.4rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    text-decoration: none;
+}
+
+.contenedor {
+    max-width: 85rem;
+    margin: 1rem auto;
+}
+
+.d-block {
+    height: 40rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: var(--oscuro);
+}
+
+.contenedorPeliculas {
+    display: grid;
+    margin: 2rem;
+    align-self: center;
+}
+
+.item {
+    width: 90%;
+    height: 90%;
+    background-color: var(--gris-claro);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid lightgray;
+    margin: 1rem;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contenedorPeliculas a {
+    text-decoration: none;
+    color: var(--oscuro);
+    transition: all 0.3s;
+}
+
+.contenedorPeliculas a:hover {
+    color: var(--primario);
+}
+
+.contenedorInfo div {
+    margin: 5rem auto;
+    max-width: 60rem;
+}
+
+.contenedorForm {
+    margin: 0 auto;
+    max-width: 100rem;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    /* utiliza el valor mas pequeño entre esos dos*/
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    color: var(--primario);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    display: block;
+}
+
+.type-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.campo textarea {
+    height: 15rem;
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+    margin-top: 1rem;
+}
+
+.wid-sm {
+    width: 100%;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+@media (min-width:768px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .contenedorPeliculas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .boton {
+        width: auto;
+    }
+
+    .proyectos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+
+    .wid-sm {
+        width: auto;
+    }
+
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+
+
+    .campo:nth-child(5) {
+        grid-column: 1/3;
+    }
+
+
+
+}
